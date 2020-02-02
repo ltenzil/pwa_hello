@@ -19,13 +19,16 @@ self.addEventListener('install', function(e) {
 self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(response) {
-       if (response) {
+      if (e.request.mode === 'navigate' && navigate.onLine == false) {
+		return caches.match('/offline.html');
+	  }
+	  if (response) {
         return response;
       }
       return fetch(e.request).then(function(response) {
-        if (response.status === 404) {
-          return caches.match('/404.html');
-        }
+        // if (response.status === 404) {
+        //   return caches.match('/404.html');
+        // }
         return response
       });
     }).catch(function() {
