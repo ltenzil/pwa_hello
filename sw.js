@@ -1,6 +1,7 @@
 var cacheName = 'hello-pwa';
 var filesToCache = [
   './',
+  './index.html',
   './offline.html',
   './css/style.css',
   './js/main.js'
@@ -19,11 +20,12 @@ self.addEventListener('install', function(e) {
 self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(response) {
-	  if (navigate.onLine == false) {
-		return response;
-	  } else {
-        return fetch(e.request);
-      }
+	  return response || fetch(e.request);
+	 //  if (navigate.onLine == false) {
+		// return response || caches.match('/offline.html');
+	 //  }else {
+  //       return response || fetch(e.request);
+  //     }
       // return fetch(e.request).then(function(response) {
       //   // if (response.status === 404) {
       //   //   return caches.match('/404.html');
