@@ -20,10 +20,9 @@ self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(response) {
 	  if (navigate.onLine == false) {
-		return response || caches.match('/offline.html');
-	  }
-	  else {
-        return response || fetch(e.request);
+		return response;
+	  } else {
+        return fetch(e.request);
       }
       // return fetch(e.request).then(function(response) {
       //   // if (response.status === 404) {
