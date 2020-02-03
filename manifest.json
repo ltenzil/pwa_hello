@@ -11,13 +11,17 @@
       "sizes": "152x152",
       "type": "image/png"
     }, {
-      "src": "images/hearts.jpg",
+      "src": "images/hc-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "images/hc-icon.png",
       "sizes": "512x512",
-      "type": "image/jpg"
+      "type": "image/png"
     }],
   "lang": "en-US",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#00b5ad",
-  "theme_color": "#00b5ad"
+  "background_color": "white",
+  "theme_color": "white"
 }
