@@ -1,19 +1,23 @@
 
 {
-  "name": "Hello World",
+  "name": "From Ten",
   "short_name": "Hello",
   "icons": [{
-    "src": "images/hello-icon-128.png",
+    "src": "images/hc-icon.png",
       "sizes": "128x128",
       "type": "image/png"
     }, {
-      "src": "images/hello-icon-512.png",
-      "sizes": "512x512",
+      "src": "images/chl.png",
+      "sizes": "152x152",
       "type": "image/png"
+    }, {
+      "src": "images/hearts.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
     }],
   "lang": "en-US",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "white",
-  "theme_color": "white"
+  "background_color": "#00b5ad",
+  "theme_color": "#00b5ad"
 }
